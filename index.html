@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>What's the weather?</title>
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<br>
+	<br>
+	<div id="mainWrapper">
+		<!----------------------------------- HEADER --------------------------------------------->
+	<header id="searchSubDiv">
+		<div id="searchBar">
+			<input type="text" name="place" id="infoot" placeholder="enter a city and see it's weather details" autofocus/>
+		</div>
+		<div id="searchBtn">
+			<button onclick="z()">search</button>
+		</div>
+	</header>
+		<!----------------------------------- HEADER --------------------------------------------->
+	<br>
+	<div id="twoDivWrapper">
+		<!----------------------------------- SECTION / query location & weather detail  --------------------------------------------->
+		<div class="subMain">
+			<section id="firstDiv">
+				<h2 id="placetext" class="text"></h2>
+				<section id="descriptionDiv">
+					<div id="subDescriptionDiv">
+						<h4 id="weather" ></h4>&nbsp;
+						<img id="favicon" rel="icon">
+					</div>
+				</section>
+			</section>
+		<!----------------------------------- SECTION / Google Map Embed   --------------------------------------------->
+			<div id="secondDiv">
+				<iframe
+					id="frame"
+					width="98%"
+					height="100%"
+					frameborder="0" style="border:0"
+					referrerpolicy="no-referrer-when-downgrade"
+					allowfullscreen>
+				</iframe>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="subMain">
+			<!----------------------------------- Nav / Toggle  Table & Grid Display of data   --------------------------------------------->
+			<nav>
+				<button onclick="Buttontoggle()" id="btnVal">Switch to Table</button>	
+			</nav>
+			<!----------------------------------- Table Display of Weather Data --------------------------------------------->
+			<div id="table">
+				<table class="table">
+					<thead>
+						<th>Weather Data</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Latitude</td>
+							<td class="centerLang">
+								<p id="lati2"></p>
+							</td>
+						</tr>
+						<tr>
+							<td>Longitude</td>
+							<td class="centerLang">
+								<p id="long2"></p>
+							</td>
+						</tr>
+						<tr>
+							<td>Speed</td>
+							<td class="centerLang">
+								<p id="speed2"></p>
+							</td>
+						</tr>
+						<tr>
+							<td>Degrees</td>
+							<td class="centerLang">
+								<p id="deg2"></p>
+							</td>
+						</tr>
+						<tr>
+							<td>Gust</td>
+							<td class="centerLang">
+								<p id="gust2"></p>
+							</td>
+						</tr>
+						<tr>
+							<td>Feels Like</td>
+							<td class="centerLang">
+								<p id="fLike2"></p>
+							</td>
+						</tr>
+						<tr>
+							<td>Humidity</td>
+							<td class="centerLang">
+								<p id="humidity2"></p>
+							</td>
+						</tr>
+						<tr>
+							<td>Pressure</td>
+							<td class="centerLang">
+								<p id="pressure2"></p>
+							</td>
+						</tr>
+						<tr>
+							<td>Temperature</td>
+							<td class="centerLang">
+								<p id="temperature2"></p>
+							</td>
+						</tr>
+						<tr>
+							<td>Temperature Min</td>
+							<td class="centerLang">
+								<p id="temp_min2"></p>
+							</td>
+						</tr>
+						<tr>
+							<td>Temperature Max</td>
+							<td class="centerLang">
+								<p id="temp_max2"></p>
+							</td>
+						</tr>
+						<tr>
+							<td>Sea Level</td>
+							<td class="centerLang">
+								<p id="seaLevel2"></p>
+							</td>
+						</tr>
+						<tr>
+							<td>Ground Level</td>
+							<td class="centerLang">
+								<p id="gLevel2"></p>
+							</td>
+						</tr>
+				
+					</tbody>
+				</table>
+			</div>
+			<!----------------------------------- Block Display of Weather Data --------------------------------------------->
+			<div id="blocks">
+				<div style="display: flex;">
+					<div class="wind">
+						<div class="card">
+							<small>Latitude</small>
+							<p id="lati"></p>
+						</div>
+					</div>
+					<div class="wind">
+						<div class="card">
+							<small>Longitude</small>
+							<p id="long"></p>
+						</div>
+					</div>
+				</div>
+	
+				<div style="width:100%;">	
+					<div style="display: flex;">
+						<div class="wind">
+							<div class="card">
+								<small>Speed</small>
+								<p id="speed"></p>
+							</div>
+						</div>
+						<div class="wind">
+							<div class="card">
+								<small>Degrees</small>
+								<p id="deg"></p>
+							</div>
+						</div>
+						<div class="wind">
+							<div class="card">
+								<small>Gust</small>
+								<p id="gust"></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+				<div style="width:100%;">
+					<div style="display: flex;">
+						<div class="wind">
+							<div class="card">
+								<small>Feels Like</small>
+								<p id="fLike"></p>
+							</div>
+						</div>
+						<div class="wind">
+							<div class="card">
+								<small>Hummidity</small>
+								<p id="humidity"></p>
+							</div>
+						</div>
+						<div class="wind">
+							<div class="card">
+								<small>Pressure</small>
+								<p id="pressure"></p>
+							</div>
+						</div>
+					</div>
+				
+					<div style="display: flex;">
+						<div class="wind">
+							<div class="card">
+								<small>Temperature</small>
+								<p id="temperature"></p>
+							</div>
+						</div>
+						<div class="wind">
+							<div class="card">
+								<small>Temperature Min</small>
+								<p id="temp_min"></p>
+							</div>
+						</div>
+						<div class="wind">
+							<div class="card">
+								<small>Temperature Max</small>
+								<p id="temp_max"></p>
+							</div>
+						</div>
+					</div>
+					
+					<div style="display: flex;">
+						<div class="wind">
+							<div class="card">
+								<small>Sea Level</small>
+								<p id="seaLevel"></p>
+							</div>
+						</div>
+						<div class="wind">
+							<div class="card">
+								<small>Ground Level</small>
+								<p id="gLevel"></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<h3 id="abi">Web Developer Skills Assessment Test - Vanilla Web&#169;AbiTolentino</h3>
+		</div>
+	</div>
+</div>
+
+	<script type="text/javascript" src="function.js"></script>
+</body>
+</html>
