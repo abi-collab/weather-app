@@ -18,7 +18,7 @@
 				<input type="text" name="place" id="infoot" placeholder="enter a city and see it's weather details" autofocus />
 			</div>
 			<div id="searchBtn">
-				<button onclick="z()">search</button>
+				<button onclick="searchPlace()">search</button>
 			</div>
 		</header>
 		<!----------------------------------- HEADER --------------------------------------------->
@@ -27,6 +27,7 @@
 			<!----------------------------------- SECTION / query location & weather detail  --------------------------------------------->
 			<div class="subMain">
 				<section id="firstDiv">
+					<br>
 					<h2 id="placetext" class="text"></h2>
 					<section id="descriptionDiv">
 						<div id="subDescriptionDiv">
@@ -37,7 +38,7 @@
 				</section>
 				<!----------------------------------- SECTION / Google Map Embed   --------------------------------------------->
 				<div id="secondDiv">
-					<iframe id="frame" width="98%" height="100%" frameborder="0" style="border:0"
+					<iframe id="frame" width="100%" height="100%" frameborder="0"
 						referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
 					</iframe>
 				</div>
@@ -112,13 +113,13 @@
 								</td>
 							</tr>
 							<tr>
-								<td>Temperature Min</td>
+								<td>Temp. Min</td>
 								<td class="centerLang">
 									<p id="temp_min2"></p>
 								</td>
 							</tr>
 							<tr>
-								<td>Temperature Max</td>
+								<td>Temp. Max</td>
 								<td class="centerLang">
 									<p id="temp_max2"></p>
 								</td>
@@ -141,7 +142,7 @@
 				</div>
 				<!----------------------------------- Block Display of Weather Data --------------------------------------------->
 				<div id="blocks">
-					<div style="display: flex;">
+					<div class="rowBlocks">
 						<div class="wind">
 							<div class="card">
 								<small>Latitude</small>
@@ -156,8 +157,8 @@
 						</div>
 					</div>
 
-					<div style="width:100%;">
-						<div style="display: flex;">
+					<!-- <div id="blockRow2" style="width:100%;"> -->
+						<div class="rowBlocks" >
 							<div class="wind">
 								<div class="card">
 									<small>Speed</small>
@@ -177,10 +178,10 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					<!-- </div> -->
 
-					<div style="width:100%;">
-						<div style="display: flex;">
+					<!-- <div style="width:100%;"> -->
+						<div class="rowBlocks">
 							<div class="wind">
 								<div class="card">
 									<small>Feels Like</small>
@@ -201,7 +202,7 @@
 							</div>
 						</div>
 
-						<div style="display: flex;">
+						<div class="rowBlocks">
 							<div class="wind">
 								<div class="card">
 									<small>Temperature</small>
@@ -210,19 +211,19 @@
 							</div>
 							<div class="wind">
 								<div class="card">
-									<small>Temperature Min</small>
+									<small>Temp. Min</small>
 									<p id="temp_min"></p>
 								</div>
 							</div>
 							<div class="wind">
 								<div class="card">
-									<small>Temperature Max</small>
+									<small>Temp. Max</small>
 									<p id="temp_max"></p>
 								</div>
 							</div>
 						</div>
 
-						<div style="display: flex;">
+						<div class="rowBlocks">
 							<div class="wind">
 								<div class="card">
 									<small>Sea Level</small>
@@ -236,14 +237,13 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					<!-- </div> -->
 				</div>
 
 				<h3 id="abi">Web Developer Skills Assessment Test - Vanilla Web&#169;AbiTolentino</h3>
 			</div>
 		</div>
 	</div>
-
 	<script type="text/javascript" src="function.js"></script>
 </body>
 
