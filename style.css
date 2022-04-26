@@ -1,35 +1,110 @@
 body {
-    /* text-align: center; */
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    /* align-content:center; */
-}
-
-#abi {
-    font-weight: 800;
-    color: grey;
-    opacity: .10;
-    text-align: center;
-}
-
-div #infoot {
-    width: 95%;
-    font-size: 20px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    padding: 10px;
-    height: 20px;
+    background-repeat: 'repeat-y';
+    background-size: 100%;
 }
 
 nav{
     text-align: right;
+    margin: 20px 0px;
+}
+
+h3 {
+    color: #36454F;
+}
+
+small {
+    color: black;
+    font-size: 13px;
+    margin: 0px 0px 0px 15px;
+    font-weight: 540;
 }
 
 input:focus {
     outline: none;
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 5px;
+    background-color: #36454F;
+}
+
+/* tr:nth-child(even) {
+    background-color: #eee;
+    color: black;
+  } */
+
+th {
+    text-align: center;
+    padding: 15px;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    color: white;
+}
+
+td {
+    font-size: 13px;
+    font-weight: 500px;
+}
+
+button {
+    background: #36454F;
+    color: whitesmoke;
+    margin: 0px;
+    font-size: 20px;
+    border-radius: 5px;
+    width: 100%;
+    letter-spacing: 1px;
+    /* width: 20%; */
+    height: 50px;
+}
+
+button:hover {
+    background: black;
+    cursor: pointer;
+    margin: 0;
+}
+
+div #infoot {
+    width: 95%;
+    font-size: 15px;
+    /* border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px; */
+    padding: 15px;
+    height: 20px;
+}
+
 .error-input-border {
     border: 1px solid #FF0000;
+}
+
+.card {
+    border-radius: 1px;
+    padding: 8px;
+    /* background-color: rgb(255,255,255,0.5); */
+    text-align: left;
+}
+
+.card h2 {
+    text-align: center;
+}
+
+.rowBlocks{
+    display: flex;
+}
+
+.subMain {
+    height: 100%;
+    width: 100%;
+}
+
+.centerLang {
+    text-align: center;
 }
 
 #favicon {
@@ -42,33 +117,16 @@ input:focus {
     color: #dddddd;
 }
 
-button {
-    background: #36454F;
-    color: whitesmoke;
-    margin: 0px;
-    font-size: 30px;
-    border-radius: 5px;
-    width: 100%;
-}
-
-button:hover {
-    background: black;
-    cursor: pointer;
-    margin: 0;
-}
-
 .wind {
     /* border: solid red .05px; */
     height: 40%;
     width: 100%;
     margin: 10px;
-    border-radius: 5px;
-    background-color: whitesmoke;
-    color:#36454F;
-}
-
-#searchBtn {
-    width: 20%;
+    color: black;
+    text-shadow: 0px 0px 3px white;
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.5);
+    /* text-shadow: 0px 0px 3px white; */
 }
 
 #mainWrapper {
@@ -89,19 +147,6 @@ button:hover {
     width: 80%;
 }
 
-.card {
-    /* border: solid pink .05px; */
-    box-shadow: 0px 0px 1px #36454F;
-    border-radius: 1px;
-    padding: 8px;
-    background-color: white;
-    text-align: left;
-}
-
-.card h2 {
-    text-align: center;
-}
-
 #descriptionDiv {
     display: flex;
     justify-content: center;
@@ -113,32 +158,8 @@ button:hover {
     display: flex;
 }
 
-.rowBlocks{
-    display: flex;
-    /* border:solid green 1px; */
-
-}
-
-.subMain {
-    height: 100%;
-    width: 100%;
-    /* background-color: #36454F; */
-    /* height: 500px; width:100%; */
-}
-
-small {
-    color: black;
-    font-size: 13px;
-    margin: 0px 0px 0px 15px;
-    font-weight: 540;
-}
-
 #frame{
     border:0;
-}
-
-h3 {
-    color: #36454F;
 }
 
 #twoDivWrapper {
@@ -152,7 +173,7 @@ h3 {
 #firstDiv {
     height: 20%;
     width: 100%;
-    /* background-color: #36454F;  */
+    background-color: #36454F; 
     color: whitesmoke
 }
 
@@ -163,40 +184,65 @@ h3 {
 
 #btnVal {
     background-color: #36454F;
-    font-size: 25px;
-    width: 50%;
-    /* margin:10px; */
+    font-size: 12px;
+    width: 20%;
 }
 
-nav {
-    margin: 20px 0px;
-}
-
-.centerLang {
+#abi {
+    font-weight: 800;
+    color: grey;
+    opacity: .10;
     text-align: center;
 }
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-th {
-    text-align: center;
-}
-
-td,
-th {
-    border: 1px solid #dddddd;
-    color: white;
-}
-
-/* tr:nth-child(even) {
-    background-color: #dddddd;
-    color: black;
-  } */
 
 @media (max-width: 900px) {
+    body {
+      background-repeat: 'repeat-y';
+      background-size: 100%;
+    }
+
+    small {
+        font-size: 12px;
+        margin: 1px;
+        font-weight: 560;
+    }
+
+    button {
+        font-size: 20px;
+        width: 100%;
+        height: 35px;
+        border-radius: 5px;
+    }
+
+    div #infoot {
+        width: 95%;
+        font-size: 15px;
+        padding: 1px;
+        height: 30px;
+        margin-right: 5px;
+    }
+
+    .subMain {
+        height: 100%;
+        width: 100%;
+        background-color: #36454F;
+        /* height: 500px; width:100%; */
+    }
+
+    .card {
+        padding: 2px;
+        text-align: center;
+    }
+
+    .card h2 {
+        font-size: 15px;
+    }
+
+    .wind {
+        color: black;
+        background-color: white;
+    }
+    
     #twoDivWrapper {
         display: block;
     }
@@ -211,38 +257,8 @@ th {
    
     }
 
-    .card {
-        padding: 2px;
-        text-align: center;
-    }
-
-    .card h2 {
-        font-size: 15px;
-    }
-
-    small {
-        font-size: 12px;
-        margin: 1px;
-        font-weight: 560;
-    }
-
-    button {
-        font-size: 20px;
-        border-radius: 1px;
-        width: 100%;
-        height: 35px;
-    }
-
     #searchBar {
         width: 100%;
-    }
-
-    div #infoot {
-        width: 95%;
-        font-size: 20px;
-        padding: 1px;
-        height: 30px;
-        margin-right: 5px;
     }
 
     #searchSubDiv {
@@ -256,6 +272,45 @@ th {
 }
 
 @media (max-width: 750px) {
+    body {
+        background-repeat: 'repeat-y';
+        background-size: 100%;
+      }
+
+      small {
+        font-size: 9px;
+        margin: 1px;
+        font-weight: 560;
+    }
+
+    button {
+        font-size: 15px;
+        border-radius: 3px;
+        width: 100%;
+    }
+
+    div #infoot {
+        width: 100%;
+        font-size: 13px;
+        padding: 2px;
+        height: 30px;
+    }
+
+    .card {
+        padding: 2px;
+        text-align: center;
+        text-shadow: none;
+    }
+
+    .card h2 {
+        font-size: 13px;
+    }
+
+    .wind {
+        color: black;
+        background-color: white;
+    }
+
     #twoDivWrapper {
         display: block;
     }
@@ -264,41 +319,11 @@ th {
         width: 100%;
     }
 
-    .card {
-        padding: 2px;
-        text-align: center;
-    }
-
-    .card h2 {
-        font-size: 13px;
-    }
-
-    small {
-        font-size: 9px;
-        margin: 1px;
-        font-weight: 560;
-    }
-
-    button {
-        font-size: 15px;
-        border-radius: 1px;
-        width: 100%;
-
-    }
-
     #searchBar {
         width: 100%;
     }
 
-    div #infoot {
-        width: 100%;
-        font-size: 15px;
-        padding: 2px;
-
-    }
-
     #btnVal {
-       
         font-size: 12px;
         width: 30%;
     }
@@ -315,9 +340,14 @@ th {
 @media (max-width: 750px) {
     div #infoot {
         width: 95%;
-        font-size: 20px;
+        font-size: 15px;
         padding: 1px;
         height: 30px;
         margin-right: 10px;
+    }
+
+    .wind {
+        color: black;
+        background-color: white;
     }
 }
