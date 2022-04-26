@@ -8,7 +8,7 @@
 	<link href='style.css' rel='stylesheet'>
 </head>
 
-<body>
+<body onload="getLocationConstant()">
 	<header>
 		<article>
 			<marquee> 
@@ -32,7 +32,7 @@
 						<input type='text' name='place' id='infoot' placeholder='Enter a city and see it`s weather details autofocus'/>
 					</div>
 					<div id='searchBtn'>
-						<button onclick='searchPlace()'>search</button>
+						<button onclick='getCityLocationUsingGeoAPIOnPressSearchButton()'>search</button>
 						<button onclick='Buttontoggle()' id='btnVal'>Switch to Table</button>
 					</div>
 				</div>
