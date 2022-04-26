@@ -1,7 +1,15 @@
 body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    background-repeat: 'repeat-y';
+    background-repeat: no-repeat;
     background-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #36454F;
+    height: 40px;
+    margin: auto;
 }
 
 nav{
@@ -9,14 +17,22 @@ nav{
     margin: 20px 0px;
 }
 
+article{
+    color: whitesmoke;
+    width: 80%;
+    text-align: center;
+    font-size: 12px; 
+    margin: auto;
+}
+
 h3 {
     color: #36454F;
 }
 
 small {
-    color: black;
+    color: whitesmoke;
     font-size: 13px;
-    margin: 0px 0px 0px 15px;
+    /* margin: 0px 0px 0px 15px; */
     font-weight: 540;
 }
 
@@ -27,7 +43,7 @@ input:focus {
 table {
     border-collapse: collapse;
     width: 100%;
-    margin: 5px;
+    margin: 10px 5px;
     background-color: #36454F;
 }
 
@@ -73,8 +89,6 @@ button:hover {
 div #infoot {
     width: 95%;
     font-size: 15px;
-    /* border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px; */
     padding: 15px;
     height: 20px;
 }
@@ -85,14 +99,54 @@ div #infoot {
 
 .card {
     border-radius: 1px;
-    padding: 8px;
-    /* background-color: rgb(255,255,255,0.5); */
-    text-align: left;
-}
-
-.card h2 {
     text-align: center;
 }
+
+.blocks {
+    align-content: space-between;
+}
+
+.dataTitle {
+    background-color: #36454F;
+    color: white;
+}
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    float: left;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    /* align-content:space-around; */
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+
+  .space-between { 
+    -webkit-align-content: space-between; 
+    align-content: space-between; 
+  }  
+
+  .flex-item {
+    margin: 10px;
+    /* text-shadow: 0px 0px 3px white; */
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.5);
+    /* padding-left: 0px  10px; */
+    width: 130px;
+    line-height: 70px;
+    text-align: center;
+  }
 
 .rowBlocks{
     display: flex;
@@ -105,6 +159,10 @@ div #infoot {
 
 .centerLang {
     text-align: center;
+}
+
+#weatherForecast {
+    margin-top: 10px;
 }
 
 #favicon {
@@ -138,14 +196,21 @@ div #infoot {
 
 #searchSubDiv {
     display: flex;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
-    text-align: left;
+    /* text-align: left; */
 }
 
 #searchBar {
-    width: 80%;
+    width: 100%;
 }
+
+#searchBtn {
+    width: 30%;
+   display: flex;
+}
+
+
 
 #descriptionDiv {
     display: flex;
@@ -160,11 +225,12 @@ div #infoot {
 
 #frame{
     border:0;
+    height: 100%;
 }
 
 #twoDivWrapper {
     width: 100%;
-    height: 800px;
+    height: 700px;
     display: flex;
     /* background-color: #36454F; */
 
@@ -178,14 +244,15 @@ div #infoot {
 }
 
 #secondDiv {
-    height: 70%;
+    height: 80%;
     width: 100%;
 }
 
 #btnVal {
     background-color: #36454F;
-    font-size: 12px;
-    width: 20%;
+    font-size: 15px;
+    margin:0px 10px;
+
 }
 
 #abi {
@@ -195,9 +262,35 @@ div #infoot {
     text-align: center;
 }
 
+@media (max-width: 1140px) {
+    .subMain {
+        height: 80%;
+        width: 100%;
+        background-color: #36454F;
+        /* height: 500px; width:100%; */
+    }
+
+    .flex-item {
+        margin:8px;
+        background-color: #fff;
+        /* background-color: rgba(255,255,255,0.5); */
+        width: 120px;
+        line-height: 60px;
+        text-align: center;
+      }
+
+    .dataTitle {
+        background-color: #eee;
+    }
+
+    small {
+        color: #36454F;
+    }
+}
+
 @media (max-width: 900px) {
     body {
-      background-repeat: 'repeat-y';
+      background-repeat: no-repeat;
       background-size: 100%;
     }
 
@@ -223,14 +316,35 @@ div #infoot {
     }
 
     .subMain {
-        height: 100%;
+        height: 70%;
         width: 100%;
         background-color: #36454F;
         /* height: 500px; width:100%; */
     }
 
+    .flex-item {
+        margin:7px;
+        background-color: #fff;
+        /* background-color: rgba(255,255,255,0.5); */
+        width: 130px;
+        line-height: 50px;
+        text-align: center;
+      }
+
+      .dataTitle {
+        background-color: #eee;
+    }
+
+    small {
+        color: #36454F;
+    }
+    
+      h3 {
+          font-size: 18px;
+      }
+
     .card {
-        padding: 2px;
+        /* padding: 2px; */
         text-align: center;
     }
 
@@ -273,7 +387,7 @@ div #infoot {
 
 @media (max-width: 750px) {
     body {
-        background-repeat: 'repeat-y';
+        background-repeat: no-repeat;
         background-size: 100%;
       }
 
@@ -309,6 +423,42 @@ div #infoot {
     .wind {
         color: black;
         background-color: white;
+    }
+
+    .subMain {
+        height: 70%;
+        width: 100%;
+        background-color: #36454F;
+        /* height: 500px; width:100%; */
+    }
+
+    .flex-item {
+        margin:7px;
+        background-color: #fff;
+        width: 80px;
+        line-height: 40px;
+        text-align: center;
+      }
+
+      .dataTitle {
+        background-color: #eee;
+    }
+
+    #btnVal {
+        display:none;
+    }
+
+    small {
+        color: #36454F;
+    }
+    
+      h3 {
+          font-size: 13px;
+      }
+
+    .card {
+        /* padding: 2px; */
+        text-align: center;
     }
 
     #twoDivWrapper {
@@ -350,4 +500,35 @@ div #infoot {
         color: black;
         background-color: white;
     }
+
+    .subMain {
+        height: 100%;
+        width: 100%;
+        background-color: #36454F;
+        /* height: 500px; width:100%; */
+    }
+
+    .flex-item {
+        margin:2px;
+        background-color: #fff;
+        width: 100px;
+        line-height: 55px;
+        text-align: center;
+      }
+
+    .dataTitle {
+        background-color: #eee;
+    }
+
+    #btnVal {
+        display:none;
+    }
+
+    small {
+        color: #36454F;
+    }
+    
+      h3 {
+          font-size: 12px;
+      }
 }

@@ -85,7 +85,7 @@ let kindOfWeather = [ // declare kinds of weather
     },
     {
       name:'light intensity drizzle',
-      backImg:'url("http://ichef.bbci.co.uk/news/640/cpsprodpb/C199/production/_101016594_9aff074f-3d3b-4652-952b-d0bea7b3949c.jpg")'
+      backImg:'url("https://ichef.bbci.co.uk/news/640/cpsprodpb/C199/production/_101016594_9aff074f-3d3b-4652-952b-d0bea7b3949c.jpg")'
     },
     {
       name:'drizzle',
@@ -179,7 +179,7 @@ let kindOfWeather = [ // declare kinds of weather
     },
     {
       name:'Shower sleet',
-      backImg:'url("")'
+      backImg:'url("https://www.thesun.co.uk/wp-content/uploads/2018/02/nintchdbpict0003843465591.jpg")'
     },
     {
       name:'Light rain and snow',
@@ -220,7 +220,7 @@ let kindOfWeather = [ // declare kinds of weather
     },
     {
       name:'sand',
-      backImg:'url("http://www.weatherwizkids.com/wp-content/uploads/2015/04/sandstorm1.jpg")'
+      backImg:'url("https://www.weatherwizkids.com/wp-content/uploads/2015/04/sandstorm1.jpg")'
     },
     {
       name:'dust',
@@ -257,4 +257,7 @@ let kindOfWeather = [ // declare kinds of weather
 
   ];
 
-  module.exports = {kindOfWeather};
+  // module.exports = {kindOfWeather};
+
+// exporting kindOfWeather
+export { kindOfWeather };
