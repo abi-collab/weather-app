@@ -139,24 +139,20 @@ function renderToDisplay(data) {
 
 function changeWeatherTheme(data){
 	let weatherDescription = data.weather[0].description;
-
-  for(let i = 0; i < kindOfWeather.length; i++) {
-    if( kindOfWeather[i].name === weatherDescription){
-      document.body.style.backgroundImage = 'url("' + kindOfWeather[i].backImg + '")';
-      document.body.style.backgroundRepeat = 'repeat-y';
-      document.body.style.backgroundSize = '100%';
-    }
-  }
+  let tema = kindOfWeather.find(theme => theme.name === weatherDescription);
+  document.body.style.backgroundImage = 'url("' + tema.backImg + '")';
+  document.body.style.backgroundRepeat = 'repeat-y';
+  document.body.style.backgroundSize = '100%';
 }
 
 function weatherDataOrigDisplayStyle() {
-  document.getElementById('table').style.display = 'none';
+  document.getElementById('dataTableContainer').style.display = 'none';
   document.getElementById('list').style.display = 'flex';
 }
 
 function Buttontoggle() {
   let t = document.getElementById('btnVal');
-  let table = document.getElementById('table');
+  let table = document.getElementById('dataTableContainer');
   let list = document.getElementById('list');
 
   if (t.innerHTML == 'Switch to Table') {
