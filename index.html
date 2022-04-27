@@ -11,264 +11,265 @@
 <body onload="getLocationConstant()">
 	<header>
 		<article>
-			<marquee> 
-					<p id='weatherForecast'>&#9996; The weather forecast, broadcast on television, warns the motorist to beware of heavy rain, fog or icy patches on roads. &#10070;
-					This representative reads the local weather forecast and talks to local farmers in order to gauge crop outputs. &#10070;
+			<marquee>
+				<p id='weatherForecast'>&#9996; The weather forecast, broadcast on television, warns the motorist to beware of
+					heavy rain, fog or icy patches on roads. &#10070;
+					This representative reads the local weather forecast and talks to local farmers in order to gauge crop
+					outputs. &#10070;
 					The context of a weather forecast service will gather the five types of information. &#10070;
-					This report is more than a bad weather forecast that we can put up with today because things might improve tomorrow. &#10070;
+					This report is more than a bad weather forecast that we can put up with today because things might improve
+					tomorrow. &#10070;
 					Hope, if anything else is wrong in his forecast, it is not his weather forecast. &#10070;
-					We have a telephone weather forecast service in twelve centres, but few people know that those centres exist. &#10070;;
+					We have a telephone weather forecast service in twelve centres, but few people know that those centres exist.
+					&#10070;;
 					Yes, but this was rejected because of the poor weather forecast.
-					</p>
-				</marquee>
+				</p>
+			</marquee>
 		</article>
 	</header>
 	<br>
-			<div id='mainWrapper'>
-				<!----------------------------------- HEADER --------------------------------------------->
-				<div id='searchSubDiv'>
-					<div id='searchBar'>
-						<input type='text' name='place' id='infoot' placeholder='Enter a city and see it`s weather details autofocus'/>
-					</div>
-					<div id='searchBtn'>
-						<button onclick='getCityLocationUsingGeoAPIOnPressSearchButton()'>search</button>
-						<button onclick='Buttontoggle()' id='btnVal'>Switch to Table</button>
-					</div>
-				</div>
-				<br>
-				<div id='twoDivWrapper'>
-					<!----------------------------------- SECTION / query location & weather detail  --------------------------------------------->
-					<div class='subMain'>
-						<section id='firstDiv'>
-							<br>
-							<h2 id='placetext' class='text'></h2>
-							<section id='descriptionDiv'>
-								<div id='subDescriptionDiv'>
-									<h4 id='weather'></h4>&nbsp;
-									<img id='favicon' rel='icon'>
-								</div>
-							</section>
-						</section>
-						<!----------------------------------- SECTION / Google Map Embed   --------------------------------------------->
-						<div id='secondDiv'>
-							<iframe id='frame' width='100%' height='100%' frameborder='0'
-								referrerpolicy='no-referrer-when-downgrade' allowfullscreen>
-							</iframe>
+	<div id='mainWrapper'>
+		<!----------------------------------- HEADER --------------------------------------------->
+		<div id='searchSubDiv'>
+			<section id='searchBar'>
+				<input type='text' name='place' id='infoot' placeholder='Enter a city and see it`s weather details' autofocus />
+			</section>
+			<section id='searchBtn'>
+				<button onclick='getCityLocationUsingGeoAPIOnPressSearchButton()'>search</button>
+				<button onclick='Buttontoggle()' id='btnVal'>Switch to Table</button>
+			</section>
+		</div>
+		<br>
+		<div id='twoDivWrapper'>
+			<!----------------------------------- SECTION / query location & weather detail  --------------------------------------------->
+			<div class='subMain'>
+				<section id='firstDiv'>
+					<!-- <br> -->
+					<h2 id='placetext' class='text'></h2>
+					<section id='descriptionDiv'>
+						<div id='subDescriptionDiv'>
+							<h4 id='weather'></h4>&nbsp;
+							<img id='favicon' rel='icon'>
 						</div>
-					</div>
-					<br>
-					<br>
-					<div class='subMain'>
-						<!----------------------------------- Table Display of Weather Data --------------------------------------------->
-							<!----------------------------------- Nav / Toggle  Table & Grid Display of data   --------------------------------------------->
-					<!-- <nav>
+					</section>
+				</section>
+				<!----------------------------------- SECTION / Google Map Embed   --------------------------------------------->
+				<section id='secondDiv'>
+					<iframe id='frame' width='100%' frameborder='0' referrerpolicy='no-referrer-when-downgrade' allowfullscreen>
+					</iframe>
+				</section>
+			</div>
+			<br>
+			<br>
+			<div class='subMain'>
+				<!----------------------------------- Table Display of Weather Data --------------------------------------------->
+				<!----------------------------------- Nav / Toggle  Table & Grid Display of data   --------------------------------------------->
+				<!-- <nav>
 						<button onclick='Buttontoggle()' id='btnVal'>Switch to Table</button>
 					</nav> -->
-						<div id='dataTableContainer'>
-							<table class='table'>
-								<thead>
-									<th>Weather Data</th>
-									<th>Value</th>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Latitude</td>
-										<td class='centerLang'>
-											<p id='lati2'></p>
-										</td>
-									</tr>
-									<tr>
-										<td>Longitude</td>
-										<td class='centerLang'>
-											<p id='long2'></p>
-										</td>
-									</tr>
-									<tr>
-										<td>Speed</td>
-										<td class='centerLang'>
-											<p id='speed2'></p>
-										</td>
-									</tr>
-									<tr>
-										<td>Degrees</td>
-										<td class='centerLang'>
-											<p id='deg2'></p>
-										</td>
-									</tr>
-									<tr>
-										<td>Gust</td>
-										<td class='centerLang'>
-											<p id='gust2'></p>
-										</td>
-									</tr>
-									<tr>
-										<td>Feels Like</td>
-										<td class='centerLang'>
-											<p id='fLike2'></p>
-										</td>
-									</tr>
-									<tr>
-										<td>Humidity</td>
-										<td class='centerLang'>
-											<p id='humidity2'></p>
-										</td>
-									</tr>
-									<tr>
-										<td>Pressure</td>
-										<td class='centerLang'>
-											<p id='pressure2'></p>
-										</td>
-									</tr>
-									<tr>
-										<td>Temperature</td>
-										<td class='centerLang'>
-											<p id='temperature2'></p>
-										</td>
-									</tr>
-									<tr>
-										<td>Temp. Min</td>
-										<td class='centerLang'>
-											<p id='temp_min2'></p>
-										</td>
-									</tr>
-									<tr>
-										<td>Temp. Max</td>
-										<td class='centerLang'>
-											<p id='temp_max2'></p>
-										</td>
-									</tr>
-									<tr>
-										<td>Sea Level</td>
-										<td class='centerLang'>
-											<p id='seaLevel2'></p>
-										</td>
-									</tr>
-									<tr>
-										<td>Ground Level</td>
-										<td class='centerLang'>
-											<p id='gLevel2'></p>
-										</td>
-									</tr>
-		
-								</tbody>
-							</table>
+				<section id='dataTableContainer'>
+					<table class='table'>
+						<thead>
+							<th>Weather Data</th>
+							<th>Value</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Latitude</td>
+								<td class='centerLang'>
+									<p id='lati2'></p>
+								</td>
+							</tr>
+							<tr>
+								<td>Longitude</td>
+								<td class='centerLang'>
+									<p id='long2'></p>
+								</td>
+							</tr>
+							<tr>
+								<td>Speed</td>
+								<td class='centerLang'>
+									<p id='speed2'></p>
+								</td>
+							</tr>
+							<tr>
+								<td>Degrees</td>
+								<td class='centerLang'>
+									<p id='deg2'></p>
+								</td>
+							</tr>
+							<tr>
+								<td>Gust</td>
+								<td class='centerLang'>
+									<p id='gust2'></p>
+								</td>
+							</tr>
+							<tr>
+								<td>Feels Like</td>
+								<td class='centerLang'>
+									<p id='fLike2'></p>
+								</td>
+							</tr>
+							<tr>
+								<td>Humidity</td>
+								<td class='centerLang'>
+									<p id='humidity2'></p>
+								</td>
+							</tr>
+							<tr>
+								<td>Pressure</td>
+								<td class='centerLang'>
+									<p id='pressure2'></p>
+								</td>
+							</tr>
+							<tr>
+								<td>Temperature</td>
+								<td class='centerLang'>
+									<p id='temperature2'></p>
+								</td>
+							</tr>
+							<tr>
+								<td>Temp. Min</td>
+								<td class='centerLang'>
+									<p id='temp_min2'></p>
+								</td>
+							</tr>
+							<tr>
+								<td>Temp. Max</td>
+								<td class='centerLang'>
+									<p id='temp_max2'></p>
+								</td>
+							</tr>
+							<tr>
+								<td>Sea Level</td>
+								<td class='centerLang'>
+									<p id='seaLevel2'></p>
+								</td>
+							</tr>
+							<tr>
+								<td>Ground Level</td>
+								<td class='centerLang'>
+									<p id='gLevel2'></p>
+								</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</section>
+				<!----------------------------------- ul li Flex Display of Weather Data --------------------------------------------->
+				<ul id='list' class='flex-container space-between'>
+					<li class='flex-item'>
+						<div class='card'>
+							<section class='dataTitle'>
+								<small>Latitude</small>
+							</section>
+							<p id='lati'></p>
 						</div>
-						<!----------------------------------- Block Display of Weather Data --------------------------------------------->
+					</li>
+					<li class='flex-item'>
+						<div class='card'>
+							<section class='dataTitle'>
+								<small>Longitude</small>
+							</section>
+							<p id='long'></p>
+						</div>
+					</li>
+					<li class='flex-item'>
+						<div class='card'>
+							<section class='dataTitle'>
+								<small>Speed</small>
+							</section>
+							<p id='speed'></p>
+						</div>
+					</li>
+					<li class='flex-item'>
+						<div class='card'>
+							<section class='dataTitle'>
+								<small>Degrees</small>
+							</section>
+							<p id='deg'></p>
+						</div>
+					</li>
+					<li class='flex-item'>
+						<div class='card'>
+							<section class='dataTitle'>
+								<small>Gust</small>
+							</section>
+							<p id='gust'></p>
+						</div>
+					</li>
+					<li class='flex-item'>
+						<div class='card'>
+							<section class='dataTitle'>
+								<small>Feels Like</small>
+							</section>
+							<p id='fLike'></p>
+						</div>
+					</li>
+					<li class='flex-item'>
+						<div class='card'>
+							<section class='dataTitle'>
+								<small>Hummidity</small>
+							</section>
+							<p id='humidity'></p>
+						</div>
+					</li>
+					<li class='flex-item'>
+						<div class='card'>
+							<section class='dataTitle'>
+								<small>Pressure</small>
+							</section>
+							<p id='pressure'></p>
+						</div>
+					</li>
+					<li class='flex-item'>
+						<div class='card'>
+							<section class='dataTitle'>
+								<small>Temperature</small>
+						</div>
+						<p id='temperature'></p>
+						</section>
+					</li>
+					<li class='flex-item'>
+						<div class='card'>
+							<section class='dataTitle'>
+								<small>Temp. Min</small>
+							</section>
+							<p id='temp_min'></p>
+						</div>
+					</li>
+					<li class='flex-item'>
+						<div class='card'>
+							<section class='dataTitle'>
+								<small>Temp. Max</small>
+							</section>
+							<p id='temp_max'></p>
+						</div>
+					</li>
+					<li class='flex-item'>
+						<div class='card'>
+							<section class='dataTitle'>
+								<small>Sea Level</small>
+							</section>
+							<p id='seaLevel'></p>
+						</div>
+					</li>
+					<li class='flex-item'>
+						<div class='card'>
+							<section class='dataTitle'>
+								<small>Ground Level</small>
+							</section>
+							<p id='gLevel'></p>
+						</div>
+					</li>
 
-						<ul id='list' class='flex-container space-between'>
-							<li class='flex-item'>
-								<div class='card'>
-									<div class='dataTitle'>
-										<small>Latitude</small>
-									</div>
-									<p id='lati'></p>
-								</div>
-							</li>
-							<li class='flex-item'>
-								<div class='card'>
-									<div class='dataTitle'>
-									 <small>Longitude</small>
-									</div>
-									<p id='long'></p>
-								</div>
-							</li>
-							<li class='flex-item'>
-								<div class='card'> 
-									<div class='dataTitle'>
-										<small>Speed</small>
-									</div>
-									<p id='speed'></p>
-								</div>
-							</li>
-							<li class='flex-item'>
-								<div class='card'>
-									<div class='dataTitle'>
-										<small>Degrees</small>
-									</div>
-									<p id='deg'></p>
-								</div>
-							</li>
-							<li class='flex-item'>
-								<div class='card'>
-									<div class='dataTitle'>
-										<small>Gust</small>
-									</div>
-									<p id='gust'></p>
-								</div>
-							</li>
-							<li class='flex-item'>
-								<div class='card'>
-									<div class='dataTitle'>
-										<small>Feels Like</small>
-									</div>
-									<p id='fLike'></p>
-								</div>
-							</li>
-							<li class='flex-item'>
-								<div class='card'>
-									<div class='dataTitle'>
-										<small>Hummidity</small>
-									</div>
-									<p id='humidity'></p>
-								</div>
-							</li>
-							<li class='flex-item'>
-								<div class='card'>
-									<div class='dataTitle'>
-										<small>Pressure</small>
-									</div>
-									<p id='pressure'></p>
-								</div>
-							</li>
-							<li class='flex-item'>
-								<div class='card'>
-									<div class='dataTitle'>
-										<small>Temperature</small>
-									</div>
-									<p id='temperature'></p>
-								</div>
-							</li>
-							<li class='flex-item'>
-								<div class='card'>
-									<div class='dataTitle'>
-										<small>Temp. Min</small>
-									</div>
-									<p id='temp_min'></p>
-								</div>
-							</li>
-							<li class='flex-item'>
-								<div class='card'>
-									<div class='dataTitle'>
-										<small>Temp. Max</small>
-									</div>
-									<p id='temp_max'></p>
-								</div>
-							</li>
-							<li class='flex-item'>
-								<div class='card'>
-									<div class='dataTitle'>
-										<small>Sea Level</small>
-									</div>
-									<p id='seaLevel'></p>
-								</div>
-							</li>
-							<li class='flex-item'>
-								<div class='card'>
-									<div class='dataTitle'>
-										<small>Ground Level</small>
-									</div>
-									<p id='gLevel'></p>
-								</div>
-							</li>
-					
-						</ul>
+				</ul>
 
-					</div>
-				</div>
 			</div>
+		</div>
+	</div>
 
 	<script type='text/javascript' src='function.js'></script>
-	<!-- <script type='module' src='./kindOfWeather.js'></script> -->
 </body>
 
 </html>
